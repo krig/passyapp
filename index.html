@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html manifest="pw.manifest">
+  <head>
+    <title>pw</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="pw.png" />
+    <link rel="apple-touch-startup-image" href="pw.jpg" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      .form-pw {
+      max-width: 300px;
+      margin: 0 auto 20px;
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+
+    <script src="js/sha1.js"></script>
+
+    <div class="container">
+      <form class="form-pw" id="form1">
+        <h3>pass ᵧ </h3>
+        <fieldset>
+          <input type="password" name="pas1" placeholder="Password" value=""></input><br>
+          <input type="text" name="site" autocapitalize="off" autocorrect="off" placeholder="Key" value=""></input><br>
+          <p class="muted" id="hint">(hint)</p>
+	      <textarea name="result"></textarea><br>
+        </fieldset>
+      </form>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+      $("input[name='pas1']").change(function() {
+        var pw1 = $("input[name='pas1']").val();
+        $("#hint").text(genpass(pw1, "foo"));
+      });
+
+      $("input[name='site']").change(function() {
+        var pw1 = $("input[name='pas1']").val();
+        var sit = $("input[name='site']").val();
+        $('textarea').val(genpass(pw1, sit));    
+      });
+
+    </script>
+
+  </body>
+</html>

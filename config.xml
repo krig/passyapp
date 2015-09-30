@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "gs.kri.passy"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Passy</name>
+
+    <description>
+        Password generator
+    </description>
+
+    <author href="http://kri.gs" email="krig+passy@koru.se">
+        Kristoffer Gronlund
+    </author>
+
+</widget>
